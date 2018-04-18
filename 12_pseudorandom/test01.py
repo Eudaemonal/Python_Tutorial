@@ -32,6 +32,7 @@ class random:
 
     # generate random float between lower and upper bound
     def randomfloat(self, lower, upper):
+        assert upper > lower
         self.x = (self.a * self.x + self.b) % self.m
         return (float)(self.x/self.m)*(upper - lower) + lower
 

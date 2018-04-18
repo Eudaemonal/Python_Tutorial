@@ -37,7 +37,6 @@ class random:
         return (float)(self.x/self.m)*(upper - lower) + lower
 
 
-
 if __name__=="__main__":
     # use 1 as seed
     m1 = random()

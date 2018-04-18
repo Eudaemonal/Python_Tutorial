@@ -17,5 +17,17 @@ usage of sort on list
 donwload a webpage
 ### 08_bfs
 breadth first search on random generated graph
-### ls09_minecraft
+### 09_minecraft
 simple minecraft game
+
+
+## Further Plan
+
+* pseudo-random number generator (LGM)
+* Uniform distribution
+* Bernoulli
+* Binomial
+* Poisson
+* Exponential
+* Gamma
+* Normal distribution (Box-Muller,Pola-Marsaglia)

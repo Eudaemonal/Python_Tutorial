@@ -4,6 +4,7 @@ import socket
 import sys
 
 if __name__=="__main__":
+    # Create a TCP/IP socket
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_address = ('localhost', 8080)
     print('starting up on %s port %s' % server_address, file=sys.stderr)

@@ -50,15 +50,15 @@ if __name__=="__main__":
 
     # generate 10000 uniformly distributed random number on [0,1]
     m3 = random()
-    seq = []
+    u = []
     m3.seed(1)
     for i in range(0,10000):
-        seq.append(m3.randomfloat(0,1))
+        u.append(m3.randomfloat(0,1))
     
     #empirical mean
-    mean = reduce(lambda x, y: x + y, seq) / len(seq)
+    mean = reduce(lambda x, y: x + y, u) / len(u)
     #empirical standard deviation
-    sd = sqrt(float(reduce(lambda x, y: x + y, map(lambda x: (x - mean) ** 2,seq))) / (len(seq)-1))
+    sd = sqrt(float(reduce(lambda x, y: x + y, map(lambda x: (x - mean) ** 2,u))) / (len(u)-1))
     
     print(mean)
     print(sd)

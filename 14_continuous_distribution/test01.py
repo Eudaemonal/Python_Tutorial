@@ -2,7 +2,7 @@
 import sys
 import time
 from functools import reduce
-from math import sqrt, exp
+from math import sqrt, exp, log, sin, cos, pi
 from collections import defaultdict
 
 
@@ -14,6 +14,8 @@ class random:
         self.m = 0x7fffffff 
         self.a = 0x41a7
         self.b = 0
+
+        self.normal_flag = 0
 
     # set seed to start with
     def seed(self, s):
@@ -56,13 +58,43 @@ class random:
         return s
 
     # exponential distribution
-    def exponential(self):
-        return
+    def exponential(self, lamda):
+        return -lamda * log(1 - self.randomfloat(0,1))
 
     # normal distribution Box-Muller method
     def normal(self):
-        return
-
+        if self.normal_flag==1: 
+            self.normal_flag = 0
+        else:
+            self.normal_flag = 1
+            u1 = self.randomfloat(0,1)
+            u2 = self.randomfloat(0,1)
+            self.z1 = sqrt(-2*log(u1)) * cos(2*pi*u2)
+            self.z2 = sqrt(-2*log(u1)) * sin(2*pi*u2) 
+        
+        if self.normal_flag==1: 
+            return self.z1
+        else: 
+            return self.z2
 
 if __name__=="__main__":
+    # generate exponential distribution
+    m1 = random()
+    m1.seed(1)
+    print(m1.exponential(1.5))
 
+    # generate 5000 normal distribution
+    m2 = random()
+    m2.seed(1)
+    z = []
+    for i in range(0,5000):
+        z.append(m2.normal())
+
+
+    #empirical mean
+    mean = reduce(lambda x, y: x + y, z) / len(z)
+    #empirical standard deviation
+    sd = sqrt(float(reduce(lambda x, y: x + y, map(lambda x: (x - mean) ** 2,z))) / (len(z)-1))
+
+    print(mean)
+    print(sd)

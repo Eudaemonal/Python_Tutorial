@@ -55,7 +55,7 @@ class random:
             s += self.bernoulli(p)
         return s
 
-    # generate poisson distribution
+    # generate poisson distribution TODO
     def poisson(self):
         return
 

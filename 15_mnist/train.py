@@ -2,8 +2,6 @@
 import sys
 import tensorflow as tf
 import matplotlib.pyplot as plt
-import time
-from datetime import datetime
 from tensorflow.examples.tutorials.mnist import input_data
 
 
@@ -14,16 +12,12 @@ Requires tensroflow installed
 https://www.tensorflow.org/install/
 
 
-'''
+Useage:
+python3 train.py
 
-# display handwritten digits in test set
-def show_image(mnist):
-    batch = mnist.test.next_batch(1)
-    plotData = batch[0]
-    plotData = plotData.reshape(28, 28)
-    plt.gray() # use this line if you don't want to see it in color
-    plt.imshow(plotData)
-    plt.show()
+Network model will be saved, it can be used for testing
+
+'''
 
 
 if __name__=="__main__":
@@ -32,9 +26,6 @@ if __name__=="__main__":
     # load the image dataset
     mnist = input_data.read_data_sets('data/mnist', one_hot=True)
     
-    # Uncomment this line if you want to see the actual image
-    # show_image(mnist)
-
     # each image has shape 28x28, flatten to an array of 1x784
     x = tf.placeholder(dtype=tf.float32, shape=[None, 784],name="image_input")
 

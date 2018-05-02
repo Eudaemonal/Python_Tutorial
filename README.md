@@ -22,5 +22,6 @@ simple minecraft game
 
 
 ## Further Plan
+image classify
 masked rnn
-classify
+

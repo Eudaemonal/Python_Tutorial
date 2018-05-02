@@ -22,4 +22,4 @@ simple minecraft game
 
 
 ## Further Plan
-
+masked rnn

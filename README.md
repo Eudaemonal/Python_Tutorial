@@ -23,11 +23,3 @@ simple minecraft game
 
 ## Further Plan
 
-* pseudo-random number generator (LGM)
-* Uniform distribution
-* Bernoulli
-* Binomial
-* Poisson
-* Exponential
-* Gamma
-* Normal distribution (Box-Muller,Pola-Marsaglia)

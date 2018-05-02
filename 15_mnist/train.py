@@ -59,7 +59,7 @@ if __name__=="__main__":
 
 
     # save the model
-    save_path = saver.save(sess, "model.ckpt")
+    save_path = saver.save(sess, "./model.ckpt")
     
     print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
     

@@ -23,7 +23,14 @@ simple minecraft game
 
 
 
+<<<<<<< HEAD
 
 ## Further Plan
 image recognition
 masked rnn
+=======
+## Further Plan
+image classify
+masked rnn
+
+>>>>>>> 9bd91a0a8e79c3a866f4280102e885122e7bc718

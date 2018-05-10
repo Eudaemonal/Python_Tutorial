@@ -9,7 +9,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 Useage:
 python3 test.py
 
-Image of digit will be shown, close it to see the testing result on console
+Image of digit will be shown, then close it to see the testing result on console
 '''
 
 

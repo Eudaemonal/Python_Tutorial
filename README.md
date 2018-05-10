@@ -19,15 +19,11 @@ donwload a webpage
 breadth first search on random generated graph
 ### 09_minecraft
 simple minecraft game
+### 10_socket
+
+
 
 
 ## Further Plan
-
-* pseudo-random number generator (LGM)
-* Uniform distribution
-* Bernoulli
-* Binomial
-* Poisson
-* Exponential
-* Gamma
-* Normal distribution (Box-Muller,Pola-Marsaglia)
+image recognition
+masked rnn

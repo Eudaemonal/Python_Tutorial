@@ -8,6 +8,10 @@ from math import sqrt
 Least square method:
 y = b0 + b1 * t
 
+b0 = y_ - b1 * t_
+b1 = cov(t, y)/ var(t)
+
+
 '''
 
 if __name__=="__main__":
